@@ -1,0 +1,2 @@
+#!/bin/bash
+ls -ap1 | grep -v '/\.\.$' | sort -k1.2 -s | awk '{ printf("%s%s", $0, (NR%2==0) ? "\n" : ",") }'
