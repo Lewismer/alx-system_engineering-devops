@@ -1,2 +1,2 @@
 #!/bin/bash
-ls -ap1 | grep -v '/\.\.$' | sort -k1.2 -s | awk 'BEGIN{ORS=", "} {if (NR == 1) {printf("%s", $0)} else {print $0}} END{print "\n"}'
+ls -ap1 | grep -v '/\.\.$' | sort -k1.2 -s | tr '\n' ',' | sed 's/,$/\n/'
