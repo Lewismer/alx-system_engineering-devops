@@ -1,2 +1,3 @@
 #!/bin/bash
-ls -ap1 | grep -v '/\.\.$' | sort -k1.2 -s | tr '\n' ',' | sed 's/, /, /g; s/,$/\n/'
+ls -xamp 
+
